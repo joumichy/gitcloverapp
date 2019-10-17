@@ -26,14 +26,16 @@ public class WatchController {
 	}
 	
 	@GetMapping
-	@RequestMapping("/{nom_montre}")
-	public List<MyEntity >showAllInfo(@PathVariable("nom_montre") String nom_montre) {
-		return myrepository.showname (nom_montre);
+	@RequestMapping("/searchbynommontre/{nom_montre}")
+	public List<MyEntity >showNameMontre(@PathVariable("nom_montre") String nom_montre) {
+		List<MyEntity> myEntities = this.myrepository.showname(nom_montre);
+		return myEntities;
 	}
 	
 	@GetMapping
-	@RequestMapping("/{id_montre}")
+	@RequestMapping("/searchbyidmontre/{id_montre}")
 	public List<MyEntity >showIdMontre(@PathVariable("id_montre") int id_montre) {
+
 		return myrepository.showidmontre (id_montre);
 	}
 
