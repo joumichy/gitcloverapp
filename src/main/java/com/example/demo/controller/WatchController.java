@@ -6,6 +6,7 @@ import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,9 +26,15 @@ public class WatchController {
 	}
 	
 	@GetMapping
+	@RequestMapping("/{nom_montre}")
+	public List<MyEntity >showAllInfo(@PathVariable("nom_montre") String nom_montre) {
+		return myrepository.showname (nom_montre);
+	}
+	
+	@GetMapping
 	@RequestMapping("/{id_montre}")
-	public List<MyEntity >showfonctionFonction(@PathParam("id_montre") String id_montre) {
-		return myrepository.showname (id_montre);
+	public List<MyEntity >showIdMontre(@PathVariable("id_montre") int id_montre) {
+		return myrepository.showidmontre (id_montre);
 	}
 
 }

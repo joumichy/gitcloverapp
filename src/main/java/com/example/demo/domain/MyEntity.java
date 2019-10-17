@@ -32,6 +32,29 @@ public class MyEntity {
 	
 	@Column(name="avis_montre")
 	private String avis_montre;
+	
+	
+	@Column(name="description_montre")
+	private String description_montre;
+	
+	@Column(name="collection_montre")
+	private String collection_montre;
+
+	public String getDescription_montre() {
+		return description_montre;
+	}
+
+	public void setDescription_montre(String description_montre) {
+		this.description_montre = description_montre;
+	}
+
+	public String getCollection_montre() {
+		return collection_montre;
+	}
+
+	public void setCollection_montre(String collection_montre) {
+		this.collection_montre = collection_montre;
+	}
 
 	public String getId_montre() {
 		return id_montre;

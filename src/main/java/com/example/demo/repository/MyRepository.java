@@ -18,7 +18,9 @@ public interface MyRepository extends JpaRepository<MyEntity, String>{
 	@Query(value = my_request+";", nativeQuery = true)
 	public List<MyEntity> showall();
 	
-	@Query(value = my_request+ " WHERE idMontre = :id_montre;", nativeQuery = true)
-	public List<MyEntity> showname(@Param("id_montre") String id_montre);
+	@Query(value = my_request+ " WHERE nom_montre = :nom_montre ;", nativeQuery = true)
+	public List<MyEntity> showname(@Param("nom_montre") String nom_montre);
 
+	@Query(value = my_request+ " WHERE id_montre = :id_montre ;", nativeQuery = true)
+	public List<MyEntity> showidmontre(@Param("id_montre") int id_montre);
 }
