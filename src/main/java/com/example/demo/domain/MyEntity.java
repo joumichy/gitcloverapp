@@ -8,6 +8,10 @@ import javax.persistence.Table;
 @Entity
 @Table (name="bfjzm0t7xwx85t9vpsya.montres")
 public class MyEntity {
+	/*
+	 * Classe possédant les attribus correspondants des colonnes de la
+	 * base de donnée montres.
+	 */
 	@Id
 	@Column(name="id_montre")
 	private String id_montre;
